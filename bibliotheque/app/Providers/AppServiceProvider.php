@@ -9,7 +9,7 @@ use Illuminate\Routing\UrlGenerator;
 
 class AppServiceProvider extends ServiceProvider
 {
-    
+
     /**
      * Register any application services.
      *
@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
         if (env('REDIRECT_HTTPS')) {
             $url->formatScheme('https');
         }
-        // Schema::defaultStringLength(191);
-        // Builder::defaultStringLength(191);
+        Schema::defaultStringLength(191);
+        Builder::defaultStringLength(191);
     }
 }
